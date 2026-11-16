@@ -1,0 +1,198 @@
+:root {
+    --page-bg-color: #853925;
+    --title-white: #f9f9f9;
+    --white: #ffffff;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+    background-color: var(--page-bg-color);
+}
+
+/* ---------- Back button ---------- */
+
+.back-btn {
+    width: 3.542%;
+    left: 2.292%;
+    top: 3.426%;
+    z-index: 5;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ---------- Arch, glow, flowers ---------- */
+
+.pranam-halo {
+    width: 81.052%;
+    left: 9.615%;
+    top: -0.71%;
+}
+
+.flower {
+    width: 4.15%;
+    top: 15.927%;
+}
+
+.flower-left {
+    left: 14.022%;
+}
+
+.flower-right {
+    left: 81.735%;
+}
+
+.pranam-arch {
+    width: 73.385%;
+    left: 13.328%;
+    top: -3.816%;
+}
+
+.pranam-glow {
+    width: 68.854%;
+    left: 15.583%;
+    top: 20.307%;
+}
+
+/* ---------- Pranam card ---------- */
+
+.pranam-card {
+    width: 38.906%;
+    left: 30.75%;
+    top: 21.418%;
+}
+
+.pranam-card .pranam-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pranam-card .pranam-circle {
+    position: absolute;
+    width: 77.912%;
+    left: 11.512%;
+    top: 11.286%;
+    height: auto;
+}
+
+/* Circle that holds the video; the square sizer keeps it round at height auto. */
+
+.pranam-video {
+    position: absolute;
+    width: 66.934%;
+    left: 49.95%;
+    top: 48.96%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    background-image: url("../images/pranam-bg-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+.pranam-video-sizer {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pranam-video video {
+    position: absolute;
+    left: 4.55%;
+    top: 8.5%;
+    width: 82%;
+    height: 83%;
+    object-fit: cover;
+    mask-image:
+        linear-gradient(to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.8) 2%,
+            rgba(0, 0, 0, 0.95) 4%,
+            black 6%,
+            black 90%,
+            rgba(0, 0, 0, 0.95) 96%,
+            rgba(0, 0, 0, 0.8) 98%,
+            transparent 100%),
+        linear-gradient(to right,
+            transparent 0%,
+            rgba(0, 0, 0, 0.8) 2%,
+            rgba(0, 0, 0, 0.95) 4%,
+            black 6%,
+            black 90%,
+            rgba(0, 0, 0, 0.95) 96%,
+            rgba(0, 0, 0, 0.8) 98%,
+            transparent 100%);
+    mask-composite: intersect;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+.pranam-title {
+    position: absolute;
+    left: 49.6%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    font-family: "Baloo", sans-serif;
+    font-weight: 400;
+    font-size: 4.1667vw;
+    line-height: 4.1667vw;
+    color: var(--title-white);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.pranam-title .hindi,
+.pranam-title .gujrati {
+    font-weight: 700;
+    font-size: 3.3vw;
+    line-height: 4.1667vw;
+}
+
+/* ---------- Home button ---------- */
+
+.home-pill {
+    width: 23.177%;
+    left: 38.776%;
+    top: 83.49%;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.home-pill:hover,
+.home-pill:focus-visible {
+    transform: scale(1.1);
+}
+
+.home-pill-label {
+    position: absolute;
+    left: 60.2%;
+    top: 49.5%;
+    transform: translate(-50%, -50%);
+    font-family: "Baloo", sans-serif;
+    font-weight: 400;
+    font-size: 3.6458vw;
+    line-height: 3.6458vw;
+    color: var(--white);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.home-pill-label .hindi,
+.home-pill-label .gujrati {
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .back-btn,
+    .home-pill {
+        transition: none;
+    }
+}

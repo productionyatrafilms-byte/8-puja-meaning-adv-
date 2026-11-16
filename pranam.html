@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranam</title>
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/pranam.css">
+</head>
+
+<body id="body" class="pranam-page">
+
+    <div id="langSelect">
+        <div id="language">
+            <label><input type="radio" onclick="val('English')" name="lang" id="en" value="English">
+                <span>E</span>
+            </label>
+            <label><input type="radio" onclick="val('Hindi')" name="lang" id="hi" value="Hindi">
+                <span>H</span>
+            </label>
+            <label><input type="radio" onclick="val('Gujrati')" name="lang" id="gu" value="Gujrati">
+                <span>G</span>
+            </label>
+        </div>
+    </div>
+
+    <a class="stage-item back-btn" href="./points.html#8" aria-label="Back">
+        <img src="./assets/images/back.png" alt="Back">
+    </a>
+
+    <img class="page-bg" src="./assets/images/bg-points.png" alt="">
+
+    <div class="main-container">
+        <div class="stage">
+            <img class="stage-spacer" src="./assets/images/stage-spacer.png" alt="">
+
+            <div class="stage-item pranam-halo">
+                <img src="./assets/images/pranam-halo.png" alt="">
+            </div>
+
+            <div class="stage-item flower flower-left">
+                <img src="./assets/images/flower.png" alt="">
+            </div>
+            <div class="stage-item flower flower-right">
+                <img src="./assets/images/flower.png" alt="">
+            </div>
+
+            <div class="stage-item pranam-arch">
+                <img src="./assets/images/pranam-arch.png" alt="">
+            </div>
+            <div class="stage-item pranam-glow">
+                <img src="./assets/images/pranam-glow.png" alt="">
+            </div>
+
+            <div class="stage-item pranam-card">
+                <img class="pranam-card-img" src="./assets/images/pranam-card.png" alt="">
+                <img class="pranam-circle" src="./assets/images/pranam-circle.png" alt="">
+
+                <div class="pranam-video">
+                    <img class="pranam-video-sizer" src="./assets/images/square.png" alt="">
+                    <video src="./assets/videos/pranam.mp4" preload="auto" autoplay muted loop playsinline></video>
+                </div>
+
+                <h1 class="pranam-title" data-text="pranam.title"></h1>
+            </div>
+
+            <a class="stage-item home-pill" href="./index.html">
+                <img src="./assets/images/pranam-home.png" alt="">
+                <span class="home-pill-label" data-text="pranam.homeLabel"></span>
+            </a>
+
+        </div>
+    </div>
+
+    <script src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/text.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/pranam.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+:root {
+    --page-bg-color: #f9e7d3;
+    --title-brown: #872d0e;
+    --white: #ffffff;
+    --caption-glow: #be3100;
+    --label-shadow: rgba(0, 0, 0, 0.3);
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-morph: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+body {
+    background-color: var(--page-bg-color);
+}
+
+/* ---------- Flowers ---------- */
+
+.flower {
+    width: 4.15%;
+    top: 12.575%;
+}
+
+.flower-left {
+    left: 27.912%;
+}
+
+.flower-right {
+    left: 67.379%;
+}
+
+/* ---------- Arch ---------- */
+
+.home-frame {
+    width: 36.771%;
+    left: 31.979%;
+    top: 0.863%;
+    overflow: hidden;
+}
+
+.home-frame-img {
+    animation: frame-rise 0.9s var(--ease-out) 0.35s both;
+}
+
+.crown {
+    width: 6.146%;
+    left: 46.927%;
+    top: 20.348%;
+}
+
+.home-title {
+    position: absolute;
+    left: 49.949%;
+    top: 49.702%;
+    transform: translate(-50%, -50%);
+    font-family: "Trochut", serif;
+    font-weight: 400;
+    font-size: 5.2vw;
+    line-height: 5.26vw;
+    color: var(--title-brown);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.divider {
+    width: 24.271%;
+    left: 37.893%;
+    top: 73.278%;
+}
+
+.knot {
+    width: 7.76%;
+    left: 46.146%;
+    top: 77.373%;
+}
+
+/* ---------- Stand ---------- */
+
+.stand {
+    width: 42.323%;
+    left: 28.879%;
+    top: 87.272%;
+    animation: stand-rise 0.6s var(--ease-out) 0.2s both;
+}
+
+.stand-text {
+    position: absolute;
+    left: 49.949%;
+    top: 93.09%;
+    transform: translate(-50%, -50%);
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-size: 1.875vw;
+    line-height: 1.8975vw;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0.052vw 0.12vw var(--caption-glow);
+    white-space: nowrap;
+}
+
+/* ---------- Points ---------- */
+
+.point {
+    position: absolute;
+    width: 16.224%;
+    height: auto;
+    line-height: 0;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    animation: point-grow 0.6s var(--ease-out) both;
+}
+
+.point-inner {
+    display: block;
+    position: relative;
+    line-height: 0;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.point:hover .point-inner,
+.point:focus-visible .point-inner {
+    transform: scale(1.05);
+}
+
+.point-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.point-hover {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0.58%;
+    top: -2.53%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.point:hover .point-hover,
+.point:focus-visible .point-hover {
+    opacity: 1;
+}
+
+.point-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 2.53vw;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0.104vw 0.104vw var(--label-shadow);
+    white-space: nowrap;
+}
+
+.point-1 { left: 9.513%;  top: 21.63%; animation-delay: 0.95s; }
+.point-2 { left: 0.398%;  top: 46.836%; animation-delay: 1.03s; }
+.point-3 { left: 18.247%; top: 46.836%; animation-delay: 1.11s; }
+.point-4 { left: 9.513%;  top: 70.143%; animation-delay: 1.19s; }
+.point-5 { left: 74.68%;  top: 21.63%; animation-delay: 0.95s; }
+.point-6 { left: 65.565%; top: 46.836%; animation-delay: 1.03s; }
+.point-7 { left: 83.414%; top: 46.836%; animation-delay: 1.11s; }
+.point-8 { left: 74.68%;  top: 70.143%; animation-delay: 1.19s; }
+
+.point-1 .point-label { left: 49.41%; top: 42.64%; }
+.point-2 .point-label { left: 50.05%; top: 47.11%; }
+.point-3 .point-label { left: 49.89%; top: 43.63%; }
+.point-4 .point-label { left: 47.92%; top: 45.68%; }
+.point-5 .point-label { left: 49.89%; top: 44.16%; }
+.point-6 .point-label { left: 48.49%; top: 44.01%; }
+.point-7 .point-label { left: 50.05%; top: 45.44%; }
+.point-8 .point-label { left: 49.89%; top: 44.95%; }
+
+/* ---------- Hindi and Gujarati sizes ----------
+   Devanagari and Gujarati glyphs sit smaller in the em box than the English
+   display fonts, so headings are bold and a little larger, with more leading. */
+
+.home-title .hindi,
+.home-title .gujrati {
+    font-weight: 700;
+    font-size: 5.6vw;
+    line-height: 6.6vw;
+}
+
+.home-title .gujrati {
+    font-size: 5.3vw;
+}
+
+.stand-text .hindi,
+.stand-text .gujrati {
+    font-size: 2vw;
+    line-height: 2.45vw;
+}
+
+.point-label .hindi,
+.point-label .gujrati {
+    font-weight: 700;
+    font-size: 2.7vw;
+    line-height: 3.1vw;
+}
+
+/* ---------- Intro ---------- */
+
+.intro-fade {
+    animation: intro-fade 0.6s ease 1.7s both;
+}
+
+@keyframes stand-rise {
+    from { transform: translateY(1.5625vw); }
+    to   { transform: translateY(0); }
+}
+
+@keyframes frame-rise {
+    from { transform: translateY(92%); }
+    to   { transform: translateY(0); }
+}
+
+@keyframes point-grow {
+    from { transform: scale(0.055); }
+    to   { transform: scale(1); }
+}
+
+@keyframes intro-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---------- Expand into the points page ----------
+   The points-page arch is this arch scaled 2.5425x. On click the text, points
+   and ornaments clear out, then the arch itself expands until it sits exactly
+   where the points-page arch is, and the page colour follows it. */
+
+.page-bg-points {
+    opacity: 0;
+}
+
+.morph-frame {
+    width: 81.639%;
+    left: 9.181%;
+    top: 1.246%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.morph-text-frame {
+    width: 74.781%;
+    left: 12.692%;
+    top: 85.839%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.home-frame-img {
+    transform-origin: 0 0;
+}
+
+.is-leaving .stage {
+    pointer-events: none;
+}
+
+.is-leaving .home-frame {
+    overflow: visible;
+    z-index: 2;
+}
+
+.is-leaving .morph-frame,
+.is-leaving .morph-text-frame {
+    z-index: 3;
+}
+
+.is-leaving .home-frame-img {
+    animation:
+        frame-expand 0.9s var(--ease-morph) 0.2s both,
+        leave-fade 0.15s ease 1.2s both;
+}
+
+/* The points-page arch image rides along with the expanding home arch, locked
+   to the same outline the whole way, and fades in over the last stretch — so
+   there is no jump when it takes over. */
+
+.is-leaving .morph-frame {
+    transform-origin: 0 0;
+    animation:
+        slide-expand 0.9s var(--ease-morph) 0.2s both,
+        leave-show 0.35s ease 0.75s both;
+}
+
+.is-leaving .morph-text-frame {
+    animation: leave-show 0.3s ease 0.9s both;
+}
+
+.is-leaving .page-bg-points {
+    animation: leave-show 0.9s var(--ease-morph) 0.2s both;
+}
+
+.is-leaving .intro-fade {
+    animation: leave-fade 0.25s ease both;
+}
+
+.is-leaving .stand {
+    animation: leave-fade 0.4s ease 0.2s both;
+}
+
+.is-leaving .flower-left {
+    animation: flower-left-out 0.9s var(--ease-morph) 0.2s both;
+}
+
+.is-leaving .flower-right {
+    animation: flower-right-out 0.9s var(--ease-morph) 0.2s both;
+}
+
+.is-leaving .point {
+    animation: leave-fade 0.25s ease both;
+}
+
+@keyframes frame-expand {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-27.797vw, -11.054vw) scale(2.5425); }
+}
+
+@keyframes slide-expand {
+    from { transform: translate(24.765vw, 4.223vw) scale(0.39331); }
+    to   { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes leave-fade {
+    to { opacity: 0; }
+}
+
+@keyframes leave-show {
+    to { opacity: 1; }
+}
+
+@keyframes flower-left-out {
+    to { transform: translate(-13.89vw, 1.821vw); }
+}
+
+@keyframes flower-right-out {
+    to { transform: translate(14.356vw, 1.821vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-frame-img,
+    .stand,
+    .point,
+    .intro-fade {
+        animation: none;
+    }
+
+    .point-inner {
+        transition: none;
+    }
+}

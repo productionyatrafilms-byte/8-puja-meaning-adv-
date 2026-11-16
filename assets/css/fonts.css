@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Trochut";
+    src: url("../../fonts/Trochut-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Yeseva One";
+    src: url("../../fonts/YesevaOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vidaloka";
+    src: url("../../fonts/Vidaloka-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Abhaya Libre";
+    src: url("../../fonts/AbhayaLibre-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url("../../fonts/Baloo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITF Devanagari";
+    src: url("../../fonts/ITFDevanagari-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITF Devanagari";
+    src: url("../../fonts/ITFDevanagari-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Gujarati";
+    src: url("../../fonts/NotoSansGujarati-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Gujarati";
+    src: url("../../fonts/NotoSansGujarati-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Every Hindi text is Devanagari and every Gujarati text is Noto Gujarati,
+   whatever the English font of the element is. The language toggle (E H G)
+   is not affected: its letters are plain spans, not .hindi / .gujrati. */
+
+.hindi {
+    font-family: "ITF Devanagari", "Nirmala UI", "Devanagari Sangam MN", serif;
+}
+
+.gujrati {
+    font-family: "Noto Sans Gujarati", "Nirmala UI", sans-serif;
+}

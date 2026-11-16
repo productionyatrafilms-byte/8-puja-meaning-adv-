@@ -1,0 +1,395 @@
+:root {
+    --page-bg-color: #853925;
+    --white: #ffffff;
+    --title-glow: #be3100;
+    --name-glow: #e55108;
+    --slide-bg: #ffca9c;
+    --slide-shadow: #f2823c;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+    background-color: var(--page-bg-color);
+}
+
+/* ---------- Home button ---------- */
+
+.back-btn {
+    width: 3.542%;
+    left: 1.93%;
+    top: 4%;
+    z-index: 5;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ---------- Flowers ---------- */
+
+.flower {
+    width: 4.15%;
+    top: 15.927%;
+}
+
+.flower-left {
+    left: 14.022%;
+}
+
+.flower-right {
+    left: 81.735%;
+}
+
+/* ---------- Arch ---------- */
+
+.slide-frame {
+    width: 81.639%;
+    left: 9.181%;
+    top: 1.246%;
+}
+
+/* ---------- Headings ---------- */
+
+.page-title {
+    position: absolute;
+    left: 50.041%;
+    top: 19.442%;
+    transform: translate(-50%, -50%);
+    font-family: "Trochut", serif;
+    font-weight: 400;
+    font-size: 2.75vw;
+    line-height: 2.8vw;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0.208vw 0.208vw var(--title-glow);
+    white-space: nowrap;
+}
+
+.puja-name {
+    position: absolute;
+    left: 50%;
+    top: 28.818%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.34vw;
+    line-height: 0;
+    white-space: nowrap;
+}
+
+.puja-name-deco {
+    width: 2.708vw;
+    height: auto;
+    display: block;
+    flex: none;
+}
+
+.puja-name-item {
+    display: none;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    font-size: 2.5vw;
+    line-height: 2.53vw;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0.104vw 0.104vw var(--name-glow);
+}
+
+.puja-name-item.is-active {
+    display: block;
+    animation: text-in 0.4s ease both;
+}
+
+/* ---------- Slider ---------- */
+
+.slider-wrapper {
+    position: absolute;
+    width: 42.552%;
+    left: 28.863%;
+    top: 32.771%;
+    line-height: 0;
+    background-color: var(--slide-bg);
+    border-radius: 1.042vw;
+    box-shadow: 0 0.521vw 1.302vw 0 var(--slide-shadow);
+}
+
+.puja-swiper {
+    width: 100%;
+    border-radius: 1.042vw;
+    overflow: hidden;
+}
+
+.puja-swiper .swiper-slide {
+    line-height: 0;
+}
+
+.puja-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slider-border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 0.521vw solid var(--white);
+    border-radius: 1.042vw;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 3;
+    transition: transform 0.3s var(--ease-out), opacity 0.3s ease;
+}
+
+.btn-prev img,
+.btn-next img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-prev {
+    width: 2.917%;
+    left: 20.781%;
+    top: 54.362%;
+}
+
+.btn-next {
+    width: 3.542%;
+    left: 76.094%;
+    top: 53.237%;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    transform: scale(1.15);
+}
+
+.btn-prev.swiper-button-disabled,
+.btn-next.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+}
+
+/* ---------- Meaning text ---------- */
+
+.text-frame {
+    width: 74.781%;
+    left: 12.692%;
+    top: 85.839%;
+}
+
+/* Fills the text plate; the clip keeps sliding text inside the plate. */
+
+.meaning {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: inset(5.3% 2.4% 12.1% 2.4%);
+}
+
+.meaning-item {
+    position: absolute;
+    left: 49.82%;
+    top: 46.63%;
+    width: 96.08%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-size: 1.6667vw;
+    line-height: 1.6867vw;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0.052vw 0.12vw var(--title-glow);
+}
+
+.meaning-item.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.meaning-item.is-in-up {
+    animation: meaning-in-up 0.6s var(--ease-out) both;
+}
+
+.meaning-item.is-in-down {
+    animation: meaning-in-down 0.6s var(--ease-out) both;
+}
+
+.meaning-item.is-out-up {
+    visibility: visible;
+    animation: meaning-out-up 0.6s var(--ease-out) both;
+}
+
+.meaning-item.is-out-down {
+    visibility: visible;
+    animation: meaning-out-down 0.6s var(--ease-out) both;
+}
+
+@keyframes meaning-in-up {
+    from { opacity: 0; transform: translate(-50%, calc(-50% + 5.625vw)); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes meaning-out-up {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to   { opacity: 0; transform: translate(-50%, calc(-50% - 5.625vw)); }
+}
+
+@keyframes meaning-in-down {
+    from { opacity: 0; transform: translate(-50%, calc(-50% - 5.625vw)); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes meaning-out-down {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to   { opacity: 0; transform: translate(-50%, calc(-50% + 5.625vw)); }
+}
+
+/* ---------- Hindi and Gujarati sizes ---------- */
+
+.page-title .hindi,
+.page-title .gujrati {
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 3.6vw;
+}
+
+.page-title .gujrati {
+    font-size: 2.85vw;
+}
+
+.puja-name-item .hindi,
+.puja-name-item .gujrati {
+    font-weight: 700;
+    line-height: 3.2vw;
+}
+
+.meaning-item .hindi,
+.meaning-item .gujrati {
+    line-height: 1.95vw;
+}
+
+/* ---------- Arrival ----------
+   index.html morphs its arch into this page's arch before navigating, so the
+   arch, flowers and text plate are already in place; everything else fades in. */
+
+.page-title,
+.puja-name,
+.btn-prev,
+.btn-next,
+.meaning {
+    animation: arrive 0.5s ease 0.1s backwards;
+}
+
+.slider-wrapper {
+    animation: arrive-slider 0.6s var(--ease-out) 0.1s backwards;
+}
+
+@keyframes arrive {
+    from { opacity: 0; }
+}
+
+@keyframes arrive-slider {
+    from { opacity: 0; transform: scale(0.9); }
+}
+
+@keyframes text-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---------- Pranam arrow ----------
+   Shown only on the last slide (Fal Puja); links on to pranam.html. */
+
+.pranam-end-link {
+    position: absolute;
+    width: 7.5vw;
+    left: 90.5%;
+    top: 85.4%;
+    z-index: 20;
+    line-height: 0;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.85);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.pranam-end-link.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    animation: pranam-pop 1.2s ease-in-out infinite;
+}
+
+.pranam-end-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pranam-end-link-label {
+    position: absolute;
+    left: 37%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Baloo", sans-serif;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+    color: var(--white);
+    text-shadow: 0 0.104vw 0.208vw rgba(128, 41, 34, 0.7);
+    white-space: nowrap;
+}
+
+.pranam-end-link-label .hindi,
+.pranam-end-link-label .gujrati {
+    font-weight: 700;
+}
+
+@keyframes pranam-pop {
+    0%,
+    100% { transform: scale(0.85); }
+    50%  { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pranam-end-link.is-visible {
+        animation: none;
+        transform: none;
+    }
+
+    .puja-name-item.is-active,
+    .meaning-item,
+    .page-title,
+    .puja-name,
+    .slider-wrapper,
+    .btn-prev,
+    .btn-next,
+    .meaning {
+        animation: none;
+    }
+
+    .btn-prev,
+    .btn-next,
+    .back-btn {
+        transition: none;
+    }
+}
