@@ -7,6 +7,17 @@ $(function () {
     var requested = parseInt(window.location.hash.replace("#", ""), 10);
     var startIndex = requested >= 1 && requested <= total ? requested - 1 : 0;
 
+    // a long puja name gets a smaller size so it stays inside the arch
+    var LONG_NAME_CHARS = 30;
+    $names.each(function () {
+        var $name = $(this);
+        $name.find(".english, .hindi, .gujrati").each(function () {
+            if ($(this).text().length > LONG_NAME_CHARS) {
+                $(this).addClass("is-long");
+            }
+        });
+    });
+
     var MEANING_MOTION = "is-in-up is-in-down is-out-up is-out-down";
     var currentIndex = -1;
 
