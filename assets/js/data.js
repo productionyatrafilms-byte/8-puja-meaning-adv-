@@ -92,7 +92,7 @@ var SITE_DATA = {
       },
       meaning: {
         english:
-          "‘O Prabhu, my soul is filled with the stench of Mithyatva (falsehood). By worshipping you with flowers, may my soul is be filled with the fragrance of Samyaktva (equanimity). May I have love and compassion for all living beings.’",
+          "‘O Prabhu, my soul is filled with the stench of Mithyatva (falsehood). By worshipping you with flowers, may my soul be filled with the fragrance of Samyaktva (equanimity). May I have love and compassion for all living beings.’",
         hindi:
           "‘हे प्रभु मेरी आत्मा पर मिथ्यात्व रूपी दुर्गंध फैली हुई है। आपकी पुष्प पूजा करने से सम्यक्त्व रूपी सुगंध से मेरी आत्मा महक उठे। पुष्प की तरह सभी जीवों के प्रति मैं प्रेम और करुणा की भावना रखूं।’",
         gujrati:
@@ -108,7 +108,7 @@ var SITE_DATA = {
       name: {
         english: "Dhoop Puja",
         hindi: "धूप पूजा",
-        gujrati: "ધૂપ પૂજા - નિઃસ્વાર્થ સેવા",
+        gujrati: "ધૂપ પૂજા",
       },
       meaning: {
         english:
@@ -128,7 +128,7 @@ var SITE_DATA = {
       name: {
         english: "Deepak Puja",
         hindi: "दीपक पूजा",
-        gujrati: "દીપક પૂજા - યોગ્ય જ્ઞાન",
+        gujrati: "દીપક પૂજા",
       },
       meaning: {
         english:
@@ -168,7 +168,7 @@ var SITE_DATA = {
       name: {
         english: "Naivedya Puja",
         hindi: "नैवेद्य पूजा",
-        gujrati: "નૈવેદ્ય પૂજા - કોઈ ખોરાક નહીં (અણહારી)",
+        gujrati: "નૈવેદ્ય પૂજા",
       },
       meaning: {
         english:
